@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class WeekDays{
+public class WeekDays {
 
     private List<String> weekDaysList = new ArrayList<>();
 
-    public void createDays(){
+    public void createDays() {
         weekDaysList.add("Monday");
         weekDaysList.add("Tuesday");
         weekDaysList.add("Wednesday");
@@ -19,7 +19,7 @@ public class WeekDays{
     }
 
     public List<String> getDaysOfWeek() {
-       return new ArrayList<>(weekDaysList);
+        return new ArrayList<>(weekDaysList);
     }
 
     public int getLengthOfDaysList() {
@@ -41,11 +41,17 @@ public class WeekDays{
         return weekDaysList.contains(day);
     }
 
-      public void sortDaysAlphabetically() {
+    public void sortDaysAlphabetically() {
         Collections.sort(weekDaysList);
     }
 
     public void clearDaysOfWeek() {
         weekDaysList.clear();
+    }
+
+    public void printDaysOfWeek(List<String> daysOfWeek) {
+        for (String day : daysOfWeek) {
+            System.out.println(day);
+        }
     }
 }
